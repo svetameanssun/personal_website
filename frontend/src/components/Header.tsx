@@ -4,7 +4,7 @@ const langs = ['EN', 'ES', 'RU']
 export default function Header() {
   return (
     <header className="flex flex-wrap items-center justify-between gap-4 py-6">
-      <a href="/" className="font-mono text-lg font-bold text-accent">S.T.</a>
+      <a href="/" className="font-mono text-lg font-bold text-accent">Systems Thinking, Human Language</a>
       <nav className="flex flex-wrap items-center gap-5 text-[15px] text-muted">
         {links.map((l) => (
           <a key={l} href={`#${l.toLowerCase()}`} className="py-2 hover:text-accent">{l}</a>
