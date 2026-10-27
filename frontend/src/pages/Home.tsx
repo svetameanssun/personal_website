@@ -1,4 +1,6 @@
 import Header from '../components/Header'
+import Projects from '../components/Projects'
+import CV from '../components/CV'
 import portrait from '../assets/portrait.webp'
 
 export default function Home() {
@@ -22,26 +24,32 @@ export default function Home() {
             <a href="#projects" className="rounded-lg bg-accent px-5 py-3.5 font-semibold text-ink">
               View projects
             </a>
-            <a href="#cv" className="rounded-lg border border-line px-5 py-3.5 font-semibold">
-              Download CV
+            <a href="#cv" className="rounded-lg border border-line px-5 py-3.5 font-semibold transition-colors hover:border-accent">
+              View CV
             </a>
           </div>
         </div>
         <div className="relative mx-auto w-full max-w-sm overflow-hidden">
-  {/* лиловая «атмосфера» за фигурой */}
-  <div
-    aria-hidden
-    className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_35%,rgba(196,167,255,0.35),transparent_65%)]"
-  />
+          {/* лиловая «атмосфера» за фигурой */}
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_35%,rgba(196,167,255,0.35),transparent_65%)]"
+          />
 
-  <img src={portrait} alt="Svetlana Titovskaia" className="relative w-full" />
+          <img src={portrait} alt="Svetlana Titovskaia" className="relative w-full" />
 
-  {/* цвет фона плавно наезжает на низ и бока фото */}
-  <div aria-hidden className="absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-ink via-ink/70 to-transparent" />
-  <div aria-hidden className="absolute inset-y-0 left-0 w-1/5 bg-gradient-to-r from-ink to-transparent" />
-  <div aria-hidden className="absolute inset-y-0 right-0 w-1/5 bg-gradient-to-l from-ink to-transparent" />
-</div>
+          {/* цвет фона плавно наезжает на низ и бока фото */}
+          <div aria-hidden className="absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-ink via-ink/70 to-transparent" />
+          <div aria-hidden className="absolute inset-y-0 left-0 w-1/5 bg-gradient-to-r from-ink to-transparent" />
+          <div aria-hidden className="absolute inset-y-0 right-0 w-1/5 bg-gradient-to-l from-ink to-transparent" />
+        </div>
       </section>
+
+      {/* Секция проектов */}
+      <Projects />
+
+      {/* Секция CV */}
+      <CV />
     </div>
   )
 }
