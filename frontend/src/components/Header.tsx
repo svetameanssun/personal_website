@@ -1,25 +1,34 @@
-const links = ['About', 'Projects', 'CV', 'Contact']
-const langs = ['EN', 'ES', 'RU']
+import React from 'react'
 
 export default function Header() {
   return (
-    <header className="flex flex-wrap items-center justify-between gap-4 py-6">
-      <a href="/" className="font-mono text-lg font-bold text-accent">Systems Thinking, Human Language</a>
-      <nav className="flex flex-wrap items-center gap-5 text-[15px] text-muted">
-        {links.map((l) => (
-          <a key={l} href={`#${l.toLowerCase()}`} className="py-2 hover:text-accent">{l}</a>
-        ))}
-        <div className="flex gap-1 rounded-md border border-line px-1.5 py-0.5 font-mono text-[13px]">
-          {langs.map((l) => (
-            <button
-              key={l}
-              type="button"
-              className={l === 'EN' ? 'font-bold text-accent' : 'hover:text-accent'}
-            >
-              {l}
-            </button>
-          ))}
-        </div>
+    <header className="flex items-center justify-between py-6 border-b border-line mb-8">
+      {/* Логотип или имя слева */}
+      <a href="#" className="font-mono text-lg font-bold text-white hover:text-accent transition-colors">
+        Systems Thinking, Human Language 
+      </a>
+
+      {/* Навигация */}
+      <nav className="flex items-center gap-6">
+        <a href="#projects" className="font-mono text-sm text-muted hover:text-white transition-colors">
+          Projects
+        </a>
+        <a href="#cv" className="font-mono text-sm text-muted hover:text-white transition-colors">
+          CV
+        </a>
+        <a href="#contacts" className="font-mono text-sm text-muted hover:text-white transition-colors">
+          Contacts
+        </a>
+
+        {/* Закомментированная кнопка смены языков */}
+        {/* 
+        <button 
+          aria-label="Change language" 
+          className="rounded-lg border border-line bg-panel px-3 py-1.5 font-mono text-xs text-muted hover:text-white transition-colors"
+        >
+          EN / RU
+        </button>
+        */}
       </nav>
     </header>
   )

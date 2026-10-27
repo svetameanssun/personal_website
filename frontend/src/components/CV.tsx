@@ -1,8 +1,4 @@
 import React from 'react'
-// Если ты положишь файл в public/Svetlana_Titovskaia_CV.pdf, 
-// то ссылка будет просто "/Svetlana_Titovskaia_CV.pdf". 
-// Или ты можешь импортировать его из assets, если он лежит там:
-// import cvPdf from '../assets/Svetlana_Titovskaia_CV.pdf'
 
 interface ExperienceItem {
   role: string

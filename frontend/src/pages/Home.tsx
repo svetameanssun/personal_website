@@ -1,6 +1,7 @@
 import Header from '../components/Header'
 import Projects from '../components/Projects'
 import CV from '../components/CV'
+import Contacts from '../components/Contacts'
 import portrait from '../assets/portrait.webp'
 
 export default function Home() {
@@ -50,6 +51,9 @@ export default function Home() {
 
       {/* Секция CV */}
       <CV />
+
+      {/* Секция контактов */}
+      <Contacts />
     </div>
   )
 }
