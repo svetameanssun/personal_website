@@ -1,5 +1,5 @@
-function App() {
-  return <h1 className="p-8 text-4xl font-bold text-blue-500">Tailwind works</h1>
-}
+import Home from './pages/Home.tsx'
 
-export default App
+export default function App() {
+  return <Home />
+}

@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@theme {
+  --color-ink: #0e0b14;
+  --color-panel: #17131f;
+  --color-line: #2a2338;
+  --color-fg: #f1eef7;
+  --color-muted: #b3abc4;
+  --color-accent: #c4a7ff;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+body {
+  @apply bg-ink font-sans text-fg;
+}
+
+@keyframes typing { from { width: 0 } to { width: 8ch } }
+@keyframes caret { 50% { border-color: transparent } }
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px) }
+  to { opacity: 1; transform: none }
+}
+
+.type { animation: typing 1.8s steps(8) 1 both, caret 0.8s step-end infinite; }
+.sur { animation: fade-up 0.7s 1.9s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .type, .sur { animation: none; }
+}
