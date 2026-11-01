@@ -1,6 +1,6 @@
 # Project Name 🚀
 
-A modern, responsive web application built with **React**, **Vite**, **TypeScript**, and styled with **Tailwind CSS**. 
+A modern, responsive [web application](https://svetlanatitovskaia.vercel.app/) built with **React**, **Vite**, **TypeScript**, and styled with **Tailwind CSS**. 
 
 > **Note:** Currently, this repository contains the **frontend** application. A dedicated backend service is planned for future releases.
 
